@@ -1,96 +1,135 @@
+/* Import Fonts: Poppins, Roboto*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/*Set padding and margin of everything to 0*/
 *{
     margin: 0;
     padding: 0;
 }
 
+/*Header / Navbar*/
+
+/*Create Navbar*/
 nav{
+    /*Set Display to flex to take up whole screen and justify content to space between*/
     display: flex;
     justify-content: space-between;
 
+    /*Background colour set to black*/
     background-color: black;
 
+    /*Set font to Roboto and make it bold*/
     font-family: "Roboto", sans-serif;
     font-weight: bold;
 }
 
 nav ul{
+    /*Display set to flex and animation set to fade down animation*/
     display: flex;
     animation: fade-down 1s;
 }
 
 nav ul li{
+    /*Get rid of list dots*/
     list-style: none;
 }
 
 nav ul li a{
+    /*Make padding for link elements but also as a way to set size of nav bar*/
     padding: 1.125vh;
     display: inline-block;
 
+    /*Make text colour white and get rid of underline on links*/
     color: white;
     text-decoration: none;
+
+    transition: 0.3s;
 }
 
+
 nav ul li a:hover{
+    /*When hovered over make links in nav bar colours invert for readability*/
     color: black;
     background-color: white;
 }
 
+/*Main Content*/
+
+/*Create section for main cards/containers*/
 .main-cards{
+    /*Make it take up all space and space cards evenly*/
     display: flex;
     justify-content: space-between;
 }
 
+/*Page Container*/
 .page-container{
+    /*Set card/container width and height and margin*/
     width: 30vw;
     height: 75vh;
 
     margin: 2vw;
 
+    /*Set overflow to hidden*/
     overflow: hidden;
 
+    /*Colours*/
     color: rgb(0, 0, 0);
     background-color: rgb(226, 226, 226);
 
+    /*Font set to Roboto*/
     font-family: "Roboto", sans-serif;
 
+    /*Round corners*/
     border-radius: 10px;
 
+    /*Add fade up animation*/
     animation: fade-up 0.5s;
     transition: 0.3s;
 }
 
 .page-container:hover{
+    /*When hovered over cards have shadow*/
     box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+/*Images in cards*/
 .page-container-image{
+    /*Set height to take up most of card*/
     height: 50vh;
+
+    /*Set background image using variable to make changing it per div easier*/
     background-image: var(--backgroundimage);
     background-size: cover;
     background-position: center;
 
+    /*Round corners*/
     border-radius: 10px;
 
     transition: 0.3s;
 }
 .page-container-image:hover{
+    /*When image is hovered over it slides to the left*/
     background-position: left;
 }
 
 .page-container-contents{
+    /*Contents for card/container*/
     margin-top: 1vh;
     margin-left: 1vw;
 }
 
+/*Create button*/
 .page-container-button{
+    /*Margin and padding for alignment*/
     margin: 1vh 7vw;
     padding: 2.5vh 4vw 2.5vh 4vw;
 
+    /*Add border and background colour*/
     border: 5px solid rgb(177, 177, 177);
     background-color: rgba(209, 209, 209, 0.25);
 
+    /*Stylize font*/
     font-size: 2rem;
     font-weight: bolder;
 
@@ -98,6 +137,7 @@ nav ul li a:hover{
 }
 
 .page-container-button:hover{
+    /*When hoevered over flip colours and change cursor to pointer*/
     color: white;
 
     border: 5px solid rgb(26, 26, 26);
@@ -107,10 +147,12 @@ nav ul li a:hover{
 }
 
 .page-container-title{
+    /*Stylize font*/
     font-size: 2.25rem;
     font-weight: bold;
 }
 
+/*ID's for card/container images as variables (as mentioned earlier)*/
 #jesko{
     --backgroundimage: url("../images/Jesko.jpg");
 }
@@ -123,68 +165,85 @@ nav ul li a:hover{
     --backgroundimage: url("../images/LexusISF.jpg");
 }
 
+/*Main body*/
+
 .main-body{
+    /*Set width and height and overflow to hidden*/
     width: 100%;
     height: 110vh;
 
     overflow: hidden;
 
+    /*Colours and have background image fade in*/
     color: white;
     background-color: black;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75)), url("../images/mainback.jpg");
 }
 
 .main-title{
+    /*Alignment for title*/
     padding: 1vh;
-    
     text-align: center;
 
+    /*Stylize font*/
     font-size: 4rem;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
 
+    /*Add fade down animation*/
     animation: fade-down 2s;
 }
 
 .main-subtitle{
+    /*Alignment for subtitle*/
     padding-top: 1vh;
-
-    color: rgb(145, 145, 145);
-
     text-align: center;
 
+    /*Colour for subtitle*/
+    color: rgb(145, 145, 145);
+
+    /*Font for subtitle*/
     font-size: 1.75rem;
     font-weight: bolder;
     font-family: "Poppins", sans-serif;
 }
 
 .main-paragraph{
+    /*Alignment for main paragraph section*/
     margin-top: 10vh;
-    max-width: 50vw;
-
     margin-left: auto;
     margin-right: auto;
 
+    max-width: 50vw;    
+    
+    /*Letter spacing for readability*/
     text-align: center;
     letter-spacing: 1px;
 
+    /*Font*/
     font-size: 1.125rem;
     font-family: "Roboto", sans-serif;
 }
 
+/*Footer*/
 footer{
+    /*Size set and display set to flex*/
     height: 3vh;
     display: flex;
 
+    /*Text Colour and Background Colour*/
     color: white;
     background-color: black;
 
+    /*Stylize text with fonts*/
     font-size: 1.25rem;
     font-weight: bolder;
     font-family: "Roboto", sans-serif;
 }
 
+/*Animations*/
 @keyframes fade-down{
+    /*Items being animated will fade down from the bottom as seen with the -50px and 0% and 0px at 100%*/
     0%{
         opacity: 0;
         transform: translateY(-50px) scale(1);
@@ -197,6 +256,7 @@ footer{
 }
 
 @keyframes fade-up{
+    /*Items being animated will fade down from the bottom as seen with the 50px and 0% and 0px at 100%*/
     0%{
         opacity: 0;
         transform: translateY(50px) scale(1);
