@@ -124,7 +124,7 @@ nav ul li a:hover {
 .page-container-button {
     /*Margin and padding for alignment*/
     margin: 1vh 7vw;
-    padding: 2.5vh 4vw 2.5vh 4vw;
+    padding: 2.25vh 4vw 2.25vh 4vw;
 
     /*Add border and background colour*/
     border: 5px solid rgb(177, 177, 177);
@@ -178,7 +178,7 @@ nav ul li a:hover {
     /*Colours and have background image fade in*/
     color: white;
     background-color: black;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.75)), url("../images/mainback.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.25)), url("../images/mainback.jpg");
 }
 
 .main-title {
@@ -283,5 +283,5 @@ footer {
 
 /*When hovered over change handle colour*/
 ::-webkit-scrollbar-thumb:hover {
-    background: #141414;
+    background: #3a3a3a;
 }
