@@ -285,3 +285,34 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: #3a3a3a;
 }
+
+
+
+/*Ctrl+C + Ctrl+V bit */
+.hero-section{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 80vh;
+    width: 85vw;
+
+    border-radius: 10px;
+
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 226, 226);
+}
+
+.hero-section-image{
+    height: 60vh;
+    width: 100%;
+
+    border-radius: 10px;
+
+    background-image: url("../images/Jesko.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+}
