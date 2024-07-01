@@ -258,7 +258,7 @@ nav ul li a:hover {
     /*Transition for box shadow on hover*/
     transition: 0.3s;
 
-    animation: fade-down 1s;
+    animation: fade-up 1s;
 }
 
 .hero:hover {
