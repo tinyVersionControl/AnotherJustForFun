@@ -166,6 +166,10 @@ nav ul li a:hover {
     --backgroundimage: url("../images/LexusISF.jpg");
 }
 
+#m3 {
+    --backgroundimage: url("../images/M3.jpg");
+}
+
 /*Main body*/
 
 .main-body {
@@ -244,6 +248,7 @@ nav ul li a:hover {
 
      /*Set Background Image to variable seen in ID*/
     background-image: var(--backgroundimage);
+    background-size: cover;
     background-position: center;
 
     /*Align Text Center*/
